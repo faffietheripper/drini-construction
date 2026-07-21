@@ -136,7 +136,7 @@ export default function HomePage() {
                 </span>
               </div>
 
-              <h1 className="max-w-5xl break-words text-[clamp(2.6rem,13vw,4.5rem)] font-black uppercase leading-[0.9] tracking-[-0.07em] md:text-7xl lg:text-7xl">
+              <h1 className="max-w-5xl break-words font-black uppercase leading-[0.9] tracking-[-0.07em] text-4xl md:text-5xl lg:text-7xl">
                 Construction work built around quality, safety and trust.
               </h1>
 
