@@ -9,13 +9,11 @@ import {
   FiCheckCircle,
   FiClock,
   FiGrid,
-
   FiHome,
   FiMapPin,
   FiPhone,
   FiShield,
   FiTool,
-
 } from "react-icons/fi";
 
 const IMG_PADDING = 12;
@@ -30,7 +28,7 @@ const services = [
   },
   {
     title: "Commercial Construction",
-    text: "Practical commercial construction services focused on functional spaces, brand presentation and long-term use.",
+    text: "Practical commercial construction services focused on functional spaces, presentation and long-term use.",
     href: "/services#commercial",
     image:
       "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop",
@@ -118,56 +116,58 @@ const imageStrip = [
 
 export default function HomePage() {
   return (
-    <main className="bg-[#efede7] text-[#171717]">
+    <main className="w-full overflow-x-hidden bg-[#efede7] text-[#171717]">
       {/* ================= HERO ================= */}
-      <section className="border-b border-[#171717]/10 bg-[#171717] text-white">
-        <div className="mx-auto grid min-h-[88vh] max-w-7xl gap-5 px-5 py-8 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
-          <div className="flex flex-col justify-between border border-white/10 bg-[#101010] p-6 md:p-9">
-            <div>
+      <section className="w-full overflow-hidden border-b border-[#171717]/10 bg-[#171717] text-white">
+        <div className="mx-auto grid w-full max-w-7xl min-w-0 gap-5 px-4 py-8 sm:px-5 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
+          <div className="flex min-w-0 flex-col justify-between border border-white/10 bg-[#101010] p-5 sm:p-6 md:p-9">
+            <div className="min-w-0">
               <div className="mb-8 flex flex-wrap gap-3">
-                <span className="border border-[#f59e0b] bg-[#f59e0b] px-3 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#171717]">
+                <span className="border border-[#f59e0b] bg-[#f59e0b] px-3 py-2 text-xs font-black uppercase tracking-[0.14em] text-[#171717] sm:tracking-[0.18em]">
                   Construction
                 </span>
-                <span className="border border-white/15 px-3 py-2 text-xs font-black uppercase tracking-[0.18em] text-white/60">
+
+                <span className="border border-white/15 px-3 py-2 text-xs font-black uppercase tracking-[0.14em] text-white/60 sm:tracking-[0.18em]">
                   Renovation
                 </span>
-                <span className="border border-white/15 px-3 py-2 text-xs font-black uppercase tracking-[0.18em] text-white/60">
+
+                <span className="border border-white/15 px-3 py-2 text-xs font-black uppercase tracking-[0.14em] text-white/60 sm:tracking-[0.18em]">
                   Maintenance
                 </span>
               </div>
 
-              <h1 className="max-w-5xl text-5xl font-black uppercase leading-[0.9] tracking-[-0.08em] md:text-7xl lg:text-7xl">
+              <h1 className="max-w-5xl break-words text-[clamp(2.6rem,13vw,4.5rem)] font-black uppercase leading-[0.9] tracking-[-0.07em] md:text-7xl lg:text-7xl">
                 Construction work built around quality, safety and trust.
               </h1>
 
-              <p className="mt-7 max-w-2xl text-lg leading-8 text-white/68 md:text-xl">
+              <p className="mt-7 max-w-2xl text-base leading-8 text-white/68 md:text-xl">
                 Drini Construction Ltd delivers residential building,
                 renovations, commercial construction, specialised trade
                 services, property maintenance, repairs and external works.
               </p>
             </div>
 
-            <div className="mt-10 grid gap-3 sm:grid-cols-2">
+            <div className="mt-10 grid min-w-0 gap-3 sm:grid-cols-2">
               <Link
                 href="/contact"
-                className="group flex items-center justify-between border border-[#f59e0b] bg-[#f59e0b] px-5 py-5 text-sm font-black uppercase tracking-[0.16em] text-[#171717] transition hover:border-white hover:bg-white"
+                className="group flex min-w-0 items-center justify-between gap-3 border border-[#f59e0b] bg-[#f59e0b] px-5 py-5 text-sm font-black uppercase tracking-[0.12em] text-[#171717] transition hover:border-white hover:bg-white sm:tracking-[0.16em]"
               >
-                Request quote
-                <FiArrowRight className="transition group-hover:translate-x-1" />
+                <span>Request quote</span>
+                <FiArrowRight className="shrink-0 transition group-hover:translate-x-1" />
               </Link>
 
               <a
                 href="tel:07476401496"
-                className="group flex items-center justify-between border border-white/15 px-5 py-5 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:border-white hover:bg-white hover:text-[#171717]"
+                className="group flex min-w-0 items-center justify-between gap-3 border border-white/15 px-5 py-5 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:border-white hover:bg-white hover:text-[#171717] sm:tracking-[0.16em]"
               >
-                Call now
-                <FiPhone />
+                <span>Call now</span>
+                <FiPhone className="shrink-0" />
               </a>
             </div>
           </div>
 
-          <div className="grid gap-5">
-            <div className="relative min-h-[420px] overflow-hidden border border-white/10 bg-[#0d0d0d] lg:min-h-[560px]">
+          <div className="grid min-w-0 gap-5">
+            <div className="relative min-h-[420px] w-full overflow-hidden border border-white/10 bg-[#0d0d0d] lg:min-h-[560px]">
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
@@ -177,24 +177,24 @@ export default function HomePage() {
               />
               <div className="absolute inset-0 bg-black/35" />
 
-              <div className="absolute left-5 top-5 border border-white/15 bg-[#101010]/90 px-4 py-3">
-                <p className="text-xs font-black uppercase tracking-[0.18em] text-[#f59e0b]">
+              <div className="absolute left-4 top-4 border border-white/15 bg-[#101010]/90 px-4 py-3 sm:left-5 sm:top-5">
+                <p className="text-xs font-black uppercase tracking-[0.14em] text-[#f59e0b] sm:tracking-[0.18em]">
                   Professionals on demand
                 </p>
               </div>
 
-              <div className="absolute bottom-5 left-5 right-5 border border-white/15 bg-[#101010]/90 p-5">
-                <p className="text-2xl font-black uppercase leading-none tracking-[-0.05em]">
+              <div className="absolute bottom-4 left-4 right-4 border border-white/15 bg-[#101010]/90 p-4 sm:bottom-5 sm:left-5 sm:right-5 sm:p-5">
+                <p className="break-words text-[clamp(1.35rem,7vw,2rem)] font-black uppercase leading-none tracking-[-0.05em]">
                   Building, renovation and maintenance services for practical
                   spaces.
                 </p>
               </div>
             </div>
 
-            <div className="grid gap-5 sm:grid-cols-2">
-              <div className="border border-white/10 bg-[#262626] p-6">
+            <div className="grid min-w-0 gap-5 sm:grid-cols-2">
+              <div className="min-w-0 border border-white/10 bg-[#262626] p-6">
                 <FiClock className="mb-5 text-2xl text-[#f59e0b]" />
-                <p className="text-3xl font-black uppercase tracking-[-0.05em]">
+                <p className="break-words text-3xl font-black uppercase tracking-[-0.05em]">
                   Mon–Fri
                 </p>
                 <p className="mt-2 text-sm leading-6 text-white/60">
@@ -202,9 +202,9 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="border border-white/10 bg-[#262626] p-6">
+              <div className="min-w-0 border border-white/10 bg-[#262626] p-6">
                 <FiMapPin className="mb-5 text-2xl text-[#f59e0b]" />
-                <p className="text-3xl font-black uppercase tracking-[-0.05em]">
+                <p className="break-words text-3xl font-black uppercase tracking-[-0.05em]">
                   Dartford
                 </p>
                 <p className="mt-2 text-sm leading-6 text-white/60">
@@ -217,15 +217,15 @@ export default function HomePage() {
       </section>
 
       {/* ================= TRUST STRIP ================= */}
-      <section className="border-b border-[#171717]/10 bg-[#f8f6ef]">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-[#171717]/10 px-5 md:grid-cols-4 md:divide-x md:divide-y-0 md:px-8 lg:px-10">
+      <section className="w-full overflow-hidden border-b border-[#171717]/10 bg-[#f8f6ef]">
+        <div className="mx-auto grid w-full max-w-7xl grid-cols-1 divide-y divide-[#171717]/10 px-4 sm:px-5 md:grid-cols-4 md:divide-x md:divide-y-0 md:px-8 lg:px-10">
           {stats.map((item) => {
             const Icon = item.icon;
 
             return (
-              <div key={item.title} className="py-8 md:px-7">
+              <div key={item.title} className="min-w-0 py-8 md:px-7">
                 <Icon className="mb-5 text-2xl text-[#b45309]" />
-                <p className="text-2xl font-black uppercase tracking-[-0.04em]">
+                <p className="break-words text-2xl font-black uppercase tracking-[-0.04em]">
                   {item.title}
                 </p>
                 <p className="mt-2 text-sm leading-6 text-[#5f5b52]">
@@ -238,17 +238,18 @@ export default function HomePage() {
       </section>
 
       {/* ================= INTRO ================= */}
-      <section className="mx-auto grid max-w-7xl gap-12 px-5 py-24 md:grid-cols-[0.85fr_1.15fr] md:px-8 lg:px-10">
-        <div>
-          <p className="text-sm font-black uppercase tracking-[0.22em] text-[#b45309]">
+      <section className="mx-auto grid w-full max-w-7xl min-w-0 gap-12 px-4 py-20 sm:px-5 md:grid-cols-[0.85fr_1.15fr] md:px-8 md:py-24 lg:px-10">
+        <div className="min-w-0">
+          <p className="text-sm font-black uppercase tracking-[0.18em] text-[#b45309] sm:tracking-[0.22em]">
             Drini Construction Ltd
           </p>
-          <h2 className="mt-4 text-4xl font-black uppercase leading-[0.95] tracking-[-0.06em] md:text-6xl">
+
+          <h2 className="mt-4 break-words text-[clamp(2.4rem,10vw,4rem)] font-black uppercase leading-[0.95] tracking-[-0.06em] md:text-6xl">
             Skilled construction professionals with a practical approach.
           </h2>
         </div>
 
-        <div className="space-y-6 text-lg leading-8 text-[#4f4b43]">
+        <div className="min-w-0 space-y-6 text-base leading-8 text-[#4f4b43] md:text-lg">
           <p>
             Construction work needs more than just tools on site. It needs clear
             communication, the right trades, safe working methods and a team
@@ -262,14 +263,16 @@ export default function HomePage() {
             commercial, trade, maintenance and external work.
           </p>
 
-          <div className="grid gap-3 pt-4 sm:grid-cols-2">
+          <div className="grid min-w-0 gap-3 pt-4 sm:grid-cols-2">
             {trustPoints.map((point) => (
               <div
                 key={point}
-                className="flex items-center gap-3 border border-[#171717]/10 bg-[#f8f6ef] p-4"
+                className="flex min-w-0 items-center gap-3 border border-[#171717]/10 bg-[#f8f6ef] p-4"
               >
                 <FiCheckCircle className="shrink-0 text-[#b45309]" />
-                <span className="text-sm font-bold">{point}</span>
+                <span className="min-w-0 break-words text-sm font-bold">
+                  {point}
+                </span>
               </div>
             ))}
           </div>
@@ -277,11 +280,11 @@ export default function HomePage() {
       </section>
 
       {/* ================= IMAGE STRIP ================= */}
-      <section className="grid grid-cols-2 border-y border-[#171717]/10 md:grid-cols-4">
+      <section className="grid w-full grid-cols-2 overflow-hidden border-y border-[#171717]/10 md:grid-cols-4">
         {imageStrip.map((image, index) => (
           <div
             key={image}
-            className="relative h-[260px] overflow-hidden border-r border-[#171717]/10 bg-[#171717] md:h-[360px]"
+            className="relative h-[240px] min-w-0 overflow-hidden border-r border-[#171717]/10 bg-[#171717] md:h-[360px]"
           >
             <div
               className="absolute inset-0 bg-cover bg-center transition duration-700 hover:scale-105"
@@ -301,57 +304,58 @@ export default function HomePage() {
         subheading="Residential Work"
         heading="Built around the way people actually live."
       >
-        <section className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-          <h2 className="col-span-1 text-4xl font-black uppercase leading-none tracking-[-0.06em] md:col-span-4 md:text-5xl">
+        <section className="mx-auto grid w-full max-w-6xl min-w-0 grid-cols-1 gap-8 px-2 pb-20 pt-12 sm:px-4 md:grid-cols-12 md:pb-24">
+          <h2 className="col-span-1 min-w-0 break-words text-[clamp(2.1rem,9vw,3rem)] font-black uppercase leading-none tracking-[-0.06em] md:col-span-4 md:text-5xl">
             Homes need clean planning and proper finishing.
           </h2>
 
-          <div className="col-span-1 md:col-span-8">
-            <p className="mb-5 text-xl leading-8 text-[#5f5b52] md:text-2xl">
+          <div className="col-span-1 min-w-0 md:col-span-8">
+            <p className="mb-5 text-lg leading-8 text-[#5f5b52] md:text-2xl">
               From renovation work to structural improvements, the goal is to
               make the space more useful, more comfortable and more valuable
               without losing control of the details.
             </p>
 
-            <p className="mb-8 text-lg leading-8 text-[#5f5b52]">
-              This is where a stronger website can sell the business properly:
-              showing the type of work, the process, the finish and the trust
-              behind the team before a customer even makes contact.
+            <p className="mb-8 text-base leading-8 text-[#5f5b52] md:text-lg">
+              Drini Construction can support residential projects with clear
+              planning, practical construction knowledge and attention to the
+              final finish.
             </p>
 
             <Link
               href="/services#residential"
-              className="inline-flex w-full items-center justify-center gap-2 bg-[#171717] px-9 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:bg-[#b45309] md:w-fit"
+              className="inline-flex w-full min-w-0 items-center justify-center gap-2 bg-[#171717] px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:bg-[#b45309] sm:px-9 sm:tracking-[0.16em] md:w-fit"
             >
               View residential work
-              <FiArrowUpRight />
+              <FiArrowUpRight className="shrink-0" />
             </Link>
           </div>
         </section>
       </TextParallaxContent>
 
       {/* ================= SERVICES ================= */}
-      <section className="border-y border-[#171717]/10 bg-[#171717] px-5 py-24 text-white md:px-8 lg:px-10">
-        <div className="mx-auto mb-12 flex max-w-7xl flex-col justify-between gap-6 md:flex-row md:items-end">
-          <div>
-            <p className="text-sm font-black uppercase tracking-[0.22em] text-[#f59e0b]">
+      <section className="w-full overflow-hidden border-y border-[#171717]/10 bg-[#171717] px-4 py-20 text-white sm:px-5 md:px-8 md:py-24 lg:px-10">
+        <div className="mx-auto mb-12 flex w-full max-w-7xl min-w-0 flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div className="min-w-0">
+            <p className="text-sm font-black uppercase tracking-[0.18em] text-[#f59e0b] sm:tracking-[0.22em]">
               Services
             </p>
-            <h2 className="mt-4 max-w-3xl text-4xl font-black uppercase leading-[0.95] tracking-[-0.06em] md:text-6xl">
+
+            <h2 className="mt-4 max-w-3xl break-words text-[clamp(2.3rem,10vw,4rem)] font-black uppercase leading-[0.95] tracking-[-0.06em] md:text-6xl">
               Construction support from first fix to finishing work.
             </h2>
           </div>
 
           <Link
             href="/services"
-            className="group inline-flex w-fit items-center gap-2 border border-white/15 px-5 py-3 text-xs font-black uppercase tracking-[0.18em] text-white transition hover:border-[#f59e0b] hover:text-[#f59e0b]"
+            className="group inline-flex w-fit items-center gap-2 border border-white/15 px-5 py-3 text-xs font-black uppercase tracking-[0.16em] text-white transition hover:border-[#f59e0b] hover:text-[#f59e0b] sm:tracking-[0.18em]"
           >
             View all services
-            <FiArrowRight className="transition group-hover:translate-x-1" />
+            <FiArrowRight className="shrink-0 transition group-hover:translate-x-1" />
           </Link>
         </div>
 
-        <div className="mx-auto grid max-w-7xl grid-cols-1 border border-white/10 md:grid-cols-2 lg:grid-cols-5">
+        <div className="mx-auto grid w-full max-w-7xl min-w-0 grid-cols-1 overflow-hidden border border-white/10 md:grid-cols-2 lg:grid-cols-5">
           {services.map((service) => (
             <ServiceCard key={service.title} {...service} />
           ))}
@@ -359,30 +363,32 @@ export default function HomePage() {
       </section>
 
       {/* ================= PROCESS ================= */}
-      <section className="bg-[#f8f6ef] px-5 py-24 md:px-8 lg:px-10">
-        <div className="mx-auto max-w-7xl">
+      <section className="w-full overflow-hidden bg-[#f8f6ef] px-4 py-20 sm:px-5 md:px-8 md:py-24 lg:px-10">
+        <div className="mx-auto w-full max-w-7xl min-w-0">
           <div className="mb-12 max-w-3xl">
-            <p className="text-sm font-black uppercase tracking-[0.22em] text-[#b45309]">
+            <p className="text-sm font-black uppercase tracking-[0.18em] text-[#b45309] sm:tracking-[0.22em]">
               How work is handled
             </p>
-            <h2 className="mt-4 text-4xl font-black uppercase leading-[0.95] tracking-[-0.06em] md:text-6xl">
+
+            <h2 className="mt-4 break-words text-[clamp(2.3rem,10vw,4rem)] font-black uppercase leading-[0.95] tracking-[-0.06em] md:text-6xl">
               Clear steps. Safe delivery. Proper finish.
             </h2>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-4">
+          <div className="grid min-w-0 gap-4 md:grid-cols-4">
             {process.map((item, index) => (
               <div
                 key={item.title}
-                className="border border-[#171717]/10 bg-[#efede7] p-6"
+                className="min-w-0 border border-[#171717]/10 bg-[#efede7] p-6"
               >
                 <div className="mb-8 flex h-11 w-11 items-center justify-center bg-[#171717] text-sm font-black text-white">
                   {String(index + 1).padStart(2, "0")}
                 </div>
 
-                <h3 className="text-2xl font-black uppercase tracking-[-0.05em]">
+                <h3 className="break-words text-2xl font-black uppercase tracking-[-0.05em]">
                   {item.title}
                 </h3>
+
                 <p className="mt-4 text-sm leading-6 text-[#5f5b52]">
                   {item.text}
                 </p>
@@ -398,70 +404,70 @@ export default function HomePage() {
         subheading="Trades & Maintenance"
         heading="The smaller details hold the whole job together."
       >
-        <section className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12">
-          <h2 className="col-span-1 text-4xl font-black uppercase leading-none tracking-[-0.06em] md:col-span-4 md:text-5xl">
+        <section className="mx-auto grid w-full max-w-6xl min-w-0 grid-cols-1 gap-8 px-2 pb-20 pt-12 sm:px-4 md:grid-cols-12 md:pb-24">
+          <h2 className="col-span-1 min-w-0 break-words text-[clamp(2.1rem,9vw,3rem)] font-black uppercase leading-none tracking-[-0.06em] md:col-span-4 md:text-5xl">
             Reliable support for the work that keeps properties moving.
           </h2>
 
-          <div className="col-span-1 md:col-span-8">
-            <p className="mb-5 text-xl leading-8 text-[#5f5b52] md:text-2xl">
+          <div className="col-span-1 min-w-0 md:col-span-8">
+            <p className="mb-5 text-lg leading-8 text-[#5f5b52] md:text-2xl">
               Plumbing, electrical, carpentry, roofing repairs and general
               upkeep all matter because they protect the bigger investment in a
               property.
             </p>
 
-            <p className="mb-8 text-lg leading-8 text-[#5f5b52]">
-              A stronger digital presence helps customers understand that Drini
-              Construction is not limited to one type of job. It presents the
-              company as a practical, multi-service construction partner.
+            <p className="mb-8 text-base leading-8 text-[#5f5b52] md:text-lg">
+              From small practical repairs to wider trade support, Drini
+              Construction can help keep projects organised and properties in
+              good condition.
             </p>
 
             <Link
               href="/services#maintenance"
-              className="inline-flex w-full items-center justify-center gap-2 bg-[#171717] px-9 py-4 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:bg-[#b45309] md:w-fit"
+              className="inline-flex w-full min-w-0 items-center justify-center gap-2 bg-[#171717] px-6 py-4 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:bg-[#b45309] sm:px-9 sm:tracking-[0.16em] md:w-fit"
             >
               View maintenance work
-              <FiArrowUpRight />
+              <FiArrowUpRight className="shrink-0" />
             </Link>
           </div>
         </section>
       </TextParallaxContent>
 
       {/* ================= FINAL CTA ================= */}
-      <section className="border-t border-white/10 bg-[#171717] px-5 py-24 text-white md:px-8 lg:px-10">
-        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[1fr_0.8fr] md:items-end">
-          <div>
-            <p className="text-sm font-black uppercase tracking-[0.22em] text-[#f59e0b]">
+      <section className="w-full overflow-hidden border-t border-white/10 bg-[#171717] px-4 py-20 text-white sm:px-5 md:px-8 md:py-24 lg:px-10">
+        <div className="mx-auto grid w-full max-w-7xl min-w-0 gap-10 md:grid-cols-[1fr_0.8fr] md:items-end">
+          <div className="min-w-0">
+            <p className="text-sm font-black uppercase tracking-[0.18em] text-[#f59e0b] sm:tracking-[0.22em]">
               Start the conversation
             </p>
 
-            <h2 className="mt-5 max-w-4xl text-5xl font-black uppercase leading-[0.9] tracking-[-0.07em] md:text-7xl">
+            <h2 className="mt-5 max-w-4xl break-words text-[clamp(2.6rem,12vw,4.5rem)] font-black uppercase leading-[0.9] tracking-[-0.07em] md:text-7xl">
               Tell Drini Construction what needs building, fixing or improving.
             </h2>
           </div>
 
-          <div className="border border-white/10 bg-[#101010] p-6">
-            <p className="text-lg leading-8 text-white/65">
+          <div className="min-w-0 border border-white/10 bg-[#101010] p-6">
+            <p className="text-base leading-8 text-white/65 md:text-lg">
               Whether the job is a renovation, repair, commercial project,
               external work or trade support, the next step is a simple
               conversation.
             </p>
 
-            <div className="mt-8 grid gap-3">
+            <div className="mt-8 grid min-w-0 gap-3">
               <Link
                 href="/contact"
-                className="group flex items-center justify-between bg-[#f59e0b] px-5 py-5 text-sm font-black uppercase tracking-[0.16em] text-[#171717] transition hover:bg-white"
+                className="group flex min-w-0 items-center justify-between gap-3 bg-[#f59e0b] px-5 py-5 text-sm font-black uppercase tracking-[0.12em] text-[#171717] transition hover:bg-white sm:tracking-[0.16em]"
               >
-                Request quote
-                <FiArrowRight className="transition group-hover:translate-x-1" />
+                <span>Request quote</span>
+                <FiArrowRight className="shrink-0 transition group-hover:translate-x-1" />
               </Link>
 
               <a
                 href="tel:07476401496"
-                className="flex items-center justify-between border border-white/15 px-5 py-5 text-sm font-black uppercase tracking-[0.16em] text-white transition hover:border-white"
+                className="flex min-w-0 items-center justify-between gap-3 border border-white/15 px-5 py-5 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:border-white sm:tracking-[0.16em]"
               >
-                Call 07476 401496
-                <FiPhone />
+                <span>Call 07476 401496</span>
+                <FiPhone className="shrink-0" />
               </a>
             </div>
           </div>
@@ -482,7 +488,7 @@ function ServiceCard({ title, text, href, image }: ServiceCardProps) {
   return (
     <Link
       href={href}
-      className="group relative min-h-[420px] overflow-hidden border-b border-white/10 p-6 md:border-r"
+      className="group relative min-h-[360px] w-full min-w-0 overflow-hidden border-b border-white/10 p-5 md:min-h-[420px] md:border-r md:p-6"
     >
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20 grayscale transition duration-700 group-hover:scale-105 group-hover:opacity-40 group-hover:grayscale-0"
@@ -490,19 +496,23 @@ function ServiceCard({ title, text, href, image }: ServiceCardProps) {
       />
       <div className="absolute inset-0 bg-[#171717]/72" />
 
-      <div className="relative z-10 flex h-full flex-col justify-between">
-        <div className="flex items-center justify-between">
-          <span className="border border-[#f59e0b]/40 bg-[#f59e0b]/10 px-3 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#f59e0b]">
+      <div className="relative z-10 flex h-full min-w-0 flex-col justify-between">
+        <div className="flex min-w-0 items-center justify-between gap-4">
+          <span className="border border-[#f59e0b]/40 bg-[#f59e0b]/10 px-3 py-2 text-xs font-black uppercase tracking-[0.14em] text-[#f59e0b] sm:tracking-[0.16em]">
             Service
           </span>
-          <FiArrowRight className="text-white/40 transition group-hover:translate-x-1 group-hover:text-[#f59e0b]" />
+
+          <FiArrowRight className="shrink-0 text-white/40 transition group-hover:translate-x-1 group-hover:text-[#f59e0b]" />
         </div>
 
-        <div>
-          <h3 className="text-3xl font-black uppercase leading-none tracking-[-0.06em]">
+        <div className="min-w-0">
+          <h3 className="break-words text-2xl font-black uppercase leading-none tracking-[-0.05em] sm:text-3xl">
             {title}
           </h3>
-          <p className="mt-5 text-sm leading-6 text-white/65">{text}</p>
+
+          <p className="mt-5 break-words text-sm leading-6 text-white/65">
+            {text}
+          </p>
         </div>
       </div>
     </Link>
@@ -523,17 +533,19 @@ function TextParallaxContent({
   children,
 }: TextParallaxContentProps) {
   return (
-    <section className="bg-[#efede7]">
+    <section className="w-full overflow-x-hidden bg-[#efede7]">
       <div
+        className="w-full max-w-full overflow-hidden"
         style={{
           paddingLeft: IMG_PADDING,
           paddingRight: IMG_PADDING,
         }}
       >
-        <div className="relative h-[145vh]">
+        <div className="relative h-[130vh] w-full overflow-hidden md:h-[145vh]">
           <StickyImage imgUrl={imgUrl} />
           <OverlayCopy heading={heading} subheading={subheading} />
         </div>
+
         {children}
       </div>
     </section>
@@ -566,7 +578,7 @@ function StickyImage({ imgUrl }: StickyImageProps) {
         top: IMG_PADDING,
         scale,
       }}
-      className="sticky z-0 overflow-hidden border border-[#171717]/10"
+      className="sticky z-0 w-full max-w-full origin-center overflow-hidden border border-[#171717]/10"
     >
       <motion.div
         className="absolute inset-0 bg-[#050505]/70"
@@ -591,7 +603,7 @@ function OverlayCopy({ subheading, heading }: OverlayCopyProps) {
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [240, -240]);
+  const y = useTransform(scrollYProgress, [0, 1], [180, -180]);
   const opacity = useTransform(scrollYProgress, [0.22, 0.5, 0.78], [0, 1, 0]);
 
   return (
@@ -601,12 +613,13 @@ function OverlayCopy({ subheading, heading }: OverlayCopyProps) {
         y,
         opacity,
       }}
-      className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center px-5 text-white"
+      className="absolute left-0 top-0 flex h-screen w-full max-w-full flex-col items-center justify-center overflow-hidden px-4 text-white"
     >
-      <p className="mb-4 border border-[#f59e0b]/40 bg-[#f59e0b]/15 px-4 py-2 text-center text-xs font-black uppercase tracking-[0.2em] text-[#f59e0b] md:text-sm">
+      <p className="mb-4 max-w-[92vw] border border-[#f59e0b]/40 bg-[#f59e0b]/15 px-4 py-2 text-center text-xs font-black uppercase tracking-[0.14em] text-[#f59e0b] sm:tracking-[0.2em] md:text-sm">
         {subheading}
       </p>
-      <p className="max-w-5xl text-center text-5xl font-black uppercase leading-[0.9] tracking-[-0.08em] md:text-8xl">
+
+      <p className="max-w-[92vw] break-words text-center text-[clamp(2.7rem,12vw,5rem)] font-black uppercase leading-[0.9] tracking-[-0.07em] md:max-w-5xl md:text-8xl">
         {heading}
       </p>
     </motion.div>
